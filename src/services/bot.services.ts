@@ -16,7 +16,6 @@ class BotService {
         })
 
         this.connected = false;
-        this.initialize('');
     }
     private async initialize(information: string): Promise<void> {
         this.client.on('qr', (qr: string) => {
@@ -31,9 +30,9 @@ class BotService {
         this.client.on('message', (message: Message) => {
             console.log('body', message.body);
             if (message.body === 'orden') {
-                message.reply('information');
+                message.reply(information);
             } else {
-                console.log("no se consigui el id")
+                console.log(`log ${information}`);
             }
         });
 
