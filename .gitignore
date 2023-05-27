@@ -172,3 +172,4 @@ dist
 .svelte-kit
 
 # End of https://www.toptal.com/developers/gitignore/api/git,linux,node
+.wwebjs_auth/
