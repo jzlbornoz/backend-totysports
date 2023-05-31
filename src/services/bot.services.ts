@@ -1,5 +1,5 @@
 import qrcode from 'qrcode-terminal';
-import { Client, LocalAuth, Message } from 'whatsapp-web.js';
+import { Client, LocalAuth, Message, NoAuth } from 'whatsapp-web.js';
 import { JerseyModel } from '../types/Jersey.model';
 
 interface Order {
@@ -17,7 +17,7 @@ class BotService {
 
     constructor() {
         this.client = new Client({
-            authStrategy: new LocalAuth(),
+            authStrategy: new NoAuth(),
             puppeteer: {
                 args: ['--no-sandbox'],
             }

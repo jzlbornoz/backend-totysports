@@ -13,7 +13,7 @@ class BotService {
     orderData;
     constructor() {
         this.client = new whatsapp_web_js_1.Client({
-            authStrategy: new whatsapp_web_js_1.LocalAuth(),
+            authStrategy: new whatsapp_web_js_1.NoAuth(),
             puppeteer: {
                 args: ['--no-sandbox'],
             }
