@@ -7,9 +7,9 @@ const express_1 = __importDefault(require("express"));
 const bot_services_1 = require("../services/bot.services");
 const router = express_1.default.Router();
 //const service = new BotService();
+const botService = bot_services_1.BotService.getInstance();
 router.post('/', async (req, res) => {
     const body = req.body;
-    const botService = bot_services_1.BotService.getInstance();
     const isConnected = await botService.isConnected();
     if (!isConnected) {
     }
