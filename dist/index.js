@@ -6,12 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const routerApi = require('./routes');
 const app = (0, express_1.default)();
-const port = 3002;
+const PORT = process.env.PORT || 3977;
 app.use(express_1.default.json());
 app.get('/', (req, res) => {
     res.send("hola");
 });
 routerApi(app);
-app.listen(port, () => {
-    console.log("servidor en el puerto " + port);
+app.listen(PORT, () => {
+    console.log("servidor en el puerto " + PORT);
 });
