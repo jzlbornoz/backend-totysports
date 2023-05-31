@@ -1,7 +1,7 @@
 import express from "express";
 const routerApi = require('./routes');
 const app = express();
-const port = 3002;
+const PORT = process.env.PORT || 3977;
 
 app.use(express.json());
 
@@ -11,6 +11,6 @@ app.get('/', (req, res: express.Response) => {
 
 routerApi(app);
 
-app.listen(port, () => {
-    console.log("servidor en el puerto " + port);
+app.listen(PORT, () => {
+    console.log("servidor en el puerto " + PORT);
 })
