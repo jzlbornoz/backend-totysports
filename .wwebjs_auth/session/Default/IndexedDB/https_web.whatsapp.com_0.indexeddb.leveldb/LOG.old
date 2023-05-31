@@ -1,83 +1,12 @@
-2023/05/30-20:25:38.433 64da Reusing MANIFEST /home/jzlbornoz/development/totysports-backend/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/05/30-20:25:38.434 64da Recovering log #2079
-2023/05/30-20:25:38.614 64da Reusing old log /home/jzlbornoz/development/totysports-backend/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/002079.log 
-2023/05/30-20:25:55.024 64d7 Compacting 1@1 + 1@2 files
-2023/05/30-20:25:55.386 64d7 Generated table #2084@1: 32133 keys, 1797010 bytes
-2023/05/30-20:25:55.386 64d7 Compacted 1@1 + 1@2 files => 1797010 bytes
-2023/05/30-20:25:55.535 64d7 compacted to: files[ 0 1 1 0 0 0 0 ]
-2023/05/30-20:26:02.866 6510 Level-0 table #2086: started
-2023/05/30-20:26:03.041 6510 Level-0 table #2086: 825398 bytes OK
-2023/05/30-20:26:03.117 6510 Delete type=2 #2081
-2023/05/30-20:26:03.117 6510 Delete type=0 #2079
-2023/05/30-20:26:03.117 6510 Delete type=2 #2062
-2023/05/30-20:26:03.216 64e4 Compacting 1@0 + 1@1 files
-2023/05/30-20:26:03.524 64e4 Generated table #2087@0: 44994 keys, 1665607 bytes
-2023/05/30-20:26:03.524 64e4 Compacted 1@0 + 1@1 files => 1665607 bytes
-2023/05/30-20:26:03.600 64e4 compacted to: files[ 0 1 1 0 0 0 0 ]
-2023/05/30-20:26:03.600 64e4 Delete type=2 #2082
-2023/05/30-20:26:03.601 64e4 Delete type=2 #2086
-2023/05/30-20:26:04.270 6510 Compacting 1@1 + 1@2 files
-2023/05/30-20:26:04.657 6510 Generated table #2088@1: 34302 keys, 2200554 bytes
-2023/05/30-20:26:04.916 6510 Generated table #2089@1: 17437 keys, 946016 bytes
-2023/05/30-20:26:04.916 6510 Compacted 1@1 + 1@2 files => 3146570 bytes
-2023/05/30-20:26:04.973 6510 compacted to: files[ 0 0 2 0 0 0 0 ]
-2023/05/30-20:26:04.973 6510 Delete type=2 #2084
-2023/05/30-20:26:04.973 6510 Delete type=2 #2087
-2023/05/30-20:26:14.345 650f Level-0 table #2091: started
-2023/05/30-20:26:14.474 650f Level-0 table #2091: 1060501 bytes OK
-2023/05/30-20:26:14.542 650f Delete type=0 #2085
-2023/05/30-20:26:14.873 6510 Compacting 1@1 + 2@2 files
-2023/05/30-20:26:15.110 6510 Generated table #2092@1: 39732 keys, 2201509 bytes
-2023/05/30-20:26:15.286 6510 Generated table #2093@1: 20222 keys, 1402334 bytes
-2023/05/30-20:26:15.287 6510 Compacted 1@1 + 2@2 files => 3603843 bytes
-2023/05/30-20:26:15.343 6510 compacted to: files[ 0 0 2 0 0 0 0 ]
-2023/05/30-20:26:15.343 6510 Delete type=2 #2091
-2023/05/30-20:26:15.343 6510 Delete type=2 #2088
-2023/05/30-20:26:15.344 6510 Delete type=2 #2089
-2023/05/30-20:26:23.194 64e4 Level-0 table #2095: started
-2023/05/30-20:26:23.328 64e4 Level-0 table #2095: 1142556 bytes OK
-2023/05/30-20:26:23.417 64e4 Delete type=0 #2090
-2023/05/30-20:26:23.481 6510 Compacting 1@1 + 2@2 files
-2023/05/30-20:26:23.749 6510 Generated table #2096@1: 46358 keys, 2213970 bytes
-2023/05/30-20:26:24.039 6510 Generated table #2097@1: 21847 keys, 1737411 bytes
-2023/05/30-20:26:24.040 6510 Compacted 1@1 + 2@2 files => 3951381 bytes
-2023/05/30-20:26:24.098 6510 compacted to: files[ 0 0 2 0 0 0 0 ]
-2023/05/30-20:26:24.098 6510 Delete type=2 #2095
-2023/05/30-20:26:24.099 6510 Delete type=2 #2092
-2023/05/30-20:26:24.099 6510 Delete type=2 #2093
-2023/05/30-20:26:53.985 64e4 Level-0 table #2099: started
-2023/05/30-20:26:54.186 64e4 Level-0 table #2099: 1157371 bytes OK
-2023/05/30-20:26:54.245 64e4 Delete type=0 #2094
-2023/05/30-20:26:54.255 6510 Compacting 1@1 + 2@2 files
-2023/05/30-20:26:54.555 6510 Generated table #2100@1: 44667 keys, 2216200 bytes
-2023/05/30-20:26:54.769 6510 Generated table #2101@1: 33440 keys, 2102691 bytes
-2023/05/30-20:26:54.769 6510 Compacted 1@1 + 2@2 files => 4318891 bytes
-2023/05/30-20:26:54.845 6510 compacted to: files[ 0 0 2 0 0 0 0 ]
-2023/05/30-20:26:54.846 6510 Delete type=2 #2097
-2023/05/30-20:26:54.846 6510 Delete type=2 #2096
-2023/05/30-20:26:54.846 6510 Delete type=2 #2099
-2023/05/30-20:27:06.419 64e4 Level-0 table #2103: started
-2023/05/30-20:27:06.558 64e4 Level-0 table #2103: 1073742 bytes OK
-2023/05/30-20:27:06.617 64e4 Delete type=0 #2098
-2023/05/30-20:27:06.635 64e4 Compacting 1@1 + 2@2 files
-2023/05/30-20:27:06.935 64e4 Generated table #2104@1: 48127 keys, 2218828 bytes
-2023/05/30-20:27:07.158 64e4 Generated table #2105@1: 28662 keys, 2203696 bytes
-2023/05/30-20:27:07.259 64e4 Generated table #2106@1: 10266 keys, 236171 bytes
-2023/05/30-20:27:07.259 64e4 Compacted 1@1 + 2@2 files => 4658695 bytes
-2023/05/30-20:27:07.326 64e4 compacted to: files[ 0 0 3 0 0 0 0 ]
-2023/05/30-20:27:07.327 64e4 Delete type=2 #2101
-2023/05/30-20:27:07.328 64e4 Delete type=2 #2100
-2023/05/30-20:27:07.328 64e4 Delete type=2 #2103
-2023/05/30-20:27:37.882 6510 Level-0 table #2108: started
-2023/05/30-20:27:38.016 6510 Level-0 table #2108: 1096137 bytes OK
-2023/05/30-20:27:38.073 6510 Delete type=0 #2102
-2023/05/30-20:27:38.087 6510 Compacting 1@1 + 3@2 files
-2023/05/30-20:27:38.436 6510 Generated table #2109@1: 49211 keys, 2232619 bytes
-2023/05/30-20:27:38.635 6510 Generated table #2110@1: 21288 keys, 2196387 bytes
-2023/05/30-20:27:38.721 6510 Generated table #2111@1: 19477 keys, 444913 bytes
-2023/05/30-20:27:38.721 6510 Compacted 1@1 + 3@2 files => 4873919 bytes
-2023/05/30-20:27:38.786 6510 compacted to: files[ 0 0 3 0 0 0 0 ]
-2023/05/30-20:27:38.786 6510 Delete type=2 #2106
-2023/05/30-20:27:38.787 6510 Delete type=2 #2104
-2023/05/30-20:27:38.787 6510 Delete type=2 #2105
-2023/05/30-20:27:38.787 6510 Delete type=2 #2108
+2023/05/31-09:58:08.696 1788 Reusing MANIFEST /home/jzlbornoz/development/totysports-backend/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/05/31-09:58:08.697 1788 Recovering log #2143
+2023/05/31-09:58:08.762 1788 Reusing old log /home/jzlbornoz/development/totysports-backend/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/002143.log 
+2023/05/31-09:58:39.739 17bc Level-0 table #2150: started
+2023/05/31-09:58:39.920 17bc Level-0 table #2150: 1197865 bytes OK
+2023/05/31-09:58:39.992 17bc Delete type=0 #2143
+2023/05/31-09:58:40.211 1788 Compacting 1@1 + 3@2 files
+2023/05/31-09:58:40.932 1788 Generated table #2151@1: 52209 keys, 2238133 bytes
+2023/05/31-09:58:41.584 1788 Generated table #2152@1: 23183 keys, 2191928 bytes
+2023/05/31-09:58:42.008 1788 Generated table #2153@1: 43983 keys, 1891873 bytes
+2023/05/31-09:58:42.009 1788 Compacted 1@1 + 3@2 files => 6321934 bytes
+2023/05/31-09:58:42.079 1788 compacted to: files[ 0 0 3 0 0 0 0 ]
