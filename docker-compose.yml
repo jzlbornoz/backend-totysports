@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  postgres-db:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=YourStore
+      - POSTGRES_USER=jzlbornoz
+      - POSTGRES_PASSWORD=fatima17
+    ports:
+      -5432:5432
+
