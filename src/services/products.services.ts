@@ -1,5 +1,16 @@
 class ProductServices {
-    constructor(){
+    constructor() {
     }
-    
+    addProduct() {
+
+    }
+    findProduct() {
+
+    }
+    deleteProduct() {
+
+    }
+    updateProduct() {
+
+    }
 }
