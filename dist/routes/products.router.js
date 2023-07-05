@@ -8,4 +8,11 @@ router.get('/', async (req, res) => {
     const products = await services.getAllProducts();
     res.status(200).json(products);
 });
+router.post('/', async (req, res) => {
+    const payload = req.body;
+    await services.addProduct(payload);
+    res.status(201).json({
+        message: "Creado"
+    });
+});
 module.exports = router;

@@ -9,4 +9,11 @@ services:
       - POSTGRES_PASSWORD=fatima17
     ports:
       -5432:5432
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_MAIL=admin@mail.com
+      - PGADMIN_DEFAULT_PASSWORD=admin123
+    ports:
+      - 5050:80
 

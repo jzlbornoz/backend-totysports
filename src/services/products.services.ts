@@ -1,13 +1,20 @@
+import { JerseyModel } from "../interfaces/Jersey.model";
+
 class ProductServices {
+    products: JerseyModel[];
     constructor() {
+        this.products = []
     }
+
 
     async getAllProducts() {
-        return "Hola"
+        return this.products;
     }
 
-    addProduct() {
-
+    async addProduct(payload: JerseyModel) {
+        const productToAdd = payload;
+        this.products.push(payload);
+        return productToAdd;
     }
     findProduct() {
 
