@@ -3,6 +3,10 @@ import { BotService } from "../services/bot.services";
 
 const router = express.Router();
 //const service = new BotService();
+
+
+/*
+
 const botService = BotService.getInstance();
 
 router.post('/', async (req: Request, res: Response) => {
@@ -12,7 +16,7 @@ router.post('/', async (req: Request, res: Response) => {
     }
     await botService.SendOrder(body);
     res.status(201).json({ message: "Mensaje enviado" })
-})
+}) */
 
 
 module.exports = router;

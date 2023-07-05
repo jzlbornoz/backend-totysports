@@ -1,6 +1,6 @@
 import qrcode from 'qrcode-terminal';
 import { Client, LocalAuth, Message, NoAuth } from 'whatsapp-web.js';
-import { JerseyModel } from '../types/Jersey.model';
+import { JerseyModel } from '../interfaces/Jersey.model';
 
 interface Order {
     id: number;

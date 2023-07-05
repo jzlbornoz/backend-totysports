@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const routerApi = require('./routes');
 const app = (0, express_1.default)();
-const PORT = process.env.PORT || 3977;
+const PORT = process.env.PORT || 3077;
 app.use(express_1.default.json());
 app.get('/', (req, res) => {
     res.send("hola");
