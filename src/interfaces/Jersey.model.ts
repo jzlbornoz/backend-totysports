@@ -11,6 +11,5 @@ export interface JerseyModel {
     technology: string[];
     link: string;
     img: string[];
-    arrive: boolean;
     brand: string;
   }
