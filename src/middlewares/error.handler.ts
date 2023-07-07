@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { CustomError } from "../interfaces/CustomError";
 
+
 type ErrorHandlerMiddleware = (
     err: CustomError,
     req: Request,
@@ -23,4 +24,14 @@ const errorHandler: ErrorHandlerMiddleware = (err, req, res, next) => {
     })
 }
 
-export { logsErrors, errorHandler };
+// Detecta los errores Boom y los maneja enviando una respuesta adecuada con la información del error. Para otros errores, 
+// simplemente pasa el control al siguiente middleware.
+const boomHandler: ErrorHandlerMiddleware = (err, req, res, next) => {
+    if (err.isBoom) {
+        const { output } = err;
+        res.status(output.statusCode).json(output.payload);
+    }
+    next(err);
+}
+
+export { logsErrors, errorHandler, boomHandler };

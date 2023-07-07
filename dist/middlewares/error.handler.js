@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.errorHandler = exports.logsErrors = void 0;
+exports.boomHandler = exports.errorHandler = exports.logsErrors = void 0;
 // Proporciona una forma de registrar y visualizar los errores en la consola para propósitos de depuración.
 const logsErrors = (err, req, res, next) => {
     console.error("Error: ", err);
@@ -15,3 +15,13 @@ const errorHandler = (err, req, res, next) => {
     });
 };
 exports.errorHandler = errorHandler;
+// Detecta los errores Boom y los maneja enviando una respuesta adecuada con la información del error. Para otros errores, 
+// simplemente pasa el control al siguiente middleware.
+const boomHandler = (err, req, res, next) => {
+    if (err.isBoom) {
+        const { output } = err;
+        res.status(output.statusCode).json(output.payload);
+    }
+    next(err);
+};
+exports.boomHandler = boomHandler;
