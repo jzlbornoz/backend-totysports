@@ -12,7 +12,8 @@ router.get('/', async (req, res) => {
     res.status(200).json(products);
 });
 router.get('/:id', (0, validator_handler_1.validatorHandler)(product_schema_1.getProductSchema, 'params'), async (req, res, next) => {
-    const products = await services.getAllProducts();
+    const { id } = req.params;
+    const products = await services.findProduct(id);
     res.status(200).json(products);
 });
 // -- Create
@@ -29,5 +30,14 @@ router.post('/', (0, validator_handler_1.validatorHandler)(product_schema_1.crea
     }
 });
 // -- Update
-router.post('/');
+router.patch('/:id', (0, validator_handler_1.validatorHandler)(product_schema_1.getProductSchema, 'params'), (0, validator_handler_1.validatorHandler)(product_schema_1.updateProductSchema, 'body'), async (request, res, next) => {
+    const payload = request.body;
+    const { id } = request.params;
+    const productToUpdate = await services.findProduct(id);
+    if (productToUpdate) {
+        res.status(201).json(productToUpdate);
+    }
+}
+// Falta por terminar
+);
 module.exports = router;

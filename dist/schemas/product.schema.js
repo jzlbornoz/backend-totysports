@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getProductSchema = exports.updateProductSchema = exports.createProductSchema = void 0;
 const joi_1 = __importDefault(require("joi"));
-const id = joi_1.default.string().uuid();
+const id = joi_1.default.string();
 const name = joi_1.default.string().min(3).max(80);
 const price = joi_1.default.number().integer().min(1).max(40000);
 const size = joi_1.default.array().items(joi_1.default.string());

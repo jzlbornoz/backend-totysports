@@ -11,14 +11,21 @@ class ProductServices {
     }
     async addProduct(payload) {
         const productToAdd = payload;
-        this.products.push(payload);
+        this.products.push({
+            id: 12,
+            ...payload
+        });
         return productToAdd;
     }
-    findProduct() {
+    async findProduct(payload) {
+        const productToFind = this.products.find((item) => item.id = parseInt(payload));
+        if (productToFind) {
+            return productToFind;
+        }
     }
-    deleteProduct() {
+    async deleteProduct() {
     }
-    updateProduct() {
+    async updateProduct() {
     }
 }
 exports.ProductServices = ProductServices;
