@@ -1,10 +1,10 @@
-import Joi, { string } from "joi";
+import Joi from "joi";
 
 
 const id = Joi.string().uuid();
-const name = Joi.string().alphanum().min(3).max(20);
+const name = Joi.string().min(3).max(80);
 const price = Joi.number().integer().min(1).max(40000);
-const size = Joi.string().min(1).max(2);
+const size = Joi.array().items(Joi.string());
 const sale = Joi.number().integer().min(1).max(40000);
 const team = Joi.string().alphanum().min(3).max(20);
 const players = Joi.array().items(Joi.string());
@@ -14,6 +14,7 @@ const technology = Joi.array().items(Joi.string());
 const link = Joi.string().uri();
 const img = Joi.array().items(Joi.string().uri())
 const brand = Joi.string().alphanum().min(2).max(20);
+const club = Joi.boolean();
 
 const createProductSchema = Joi.object({
     name: name.required(),
@@ -27,7 +28,8 @@ const createProductSchema = Joi.object({
     technology: technology.required(),
     link: link.required(),
     img: img.required(),
-    brand: brand.required()
+    brand: brand.required(),
+    club: club.required(),
 
 })
 
@@ -43,11 +45,12 @@ const updateProductSchema = Joi.object({
     technology: technology,
     link: link,
     img: img,
-    brand: brand
+    brand: brand,
+    club: club
 })
 
 const getProductSchema = Joi.object({
     id: id.required()
 })
 
-module.exports = { createProductSchema, updateProductSchema, getProductSchema }
+export { createProductSchema, updateProductSchema, getProductSchema }

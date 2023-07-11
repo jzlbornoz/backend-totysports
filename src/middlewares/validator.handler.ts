@@ -8,16 +8,15 @@ type ValidatorHandlerMiddleware = (
     schema: Schema,
     property: string
 ) => (
-    err: CustomError,
     req: Request,
     res: Response,
     next: NextFunction) => void
 
 //clousure
 const validatorHandler: ValidatorHandlerMiddleware = (schema, property) => {
-    return (err, req, res, next) => {
+    return (req, res, next) => {
         const data = req[property as keyof Request];
-        const { error } = schema.validate(data);
+        const { error } = schema.validate(data , {abortEarly: false});
         if (error) {
             next(badRequest(error));
         }
