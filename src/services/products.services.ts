@@ -1,5 +1,7 @@
+import { Pool } from "pg";
 import { JerseyModel } from "../interfaces/Jersey.model";
 import { getConnection } from "../libs/postgres";
+import { postgresPool } from "../libs/postgres.pool";
 
 export interface ProductsModel {
     id: number;
@@ -19,14 +21,19 @@ export interface ProductsModel {
 
 class ProductServices {
     products: ProductsModel[];
+    pool: Pool
     constructor() {
         this.products = []
+        this.pool = postgresPool;
+
+        // Configura un manejador de errores para el pool
+        this.pool.on('error', (error: Error) => console.log(error));
     }
 
 
     async getAllProducts() {
         const client = await getConnection();
-        const rta = await client.query('SELECT * FROM task');
+        const rta = await this.pool.query('SELECT * FROM task');
         return rta.rows;
     }
 
