@@ -1,4 +1,5 @@
 import { JerseyModel } from "../interfaces/Jersey.model";
+import { getConnection } from "../libs/postgres";
 
 export interface ProductsModel {
     id: number;
@@ -24,7 +25,9 @@ class ProductServices {
 
 
     async getAllProducts() {
-        return this.products;
+        const client = await getConnection();
+        const rta = await client.query('SELECT * FROM task');
+        return rta.rows;
     }
 
     async addProduct(payload: JerseyModel) {
