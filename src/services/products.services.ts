@@ -1,7 +1,8 @@
 import { Pool } from "pg";
 import { JerseyModel } from "../interfaces/Jersey.model";
 import { getConnection } from "../libs/postgres";
-import { postgresPool } from "../libs/postgres.pool";
+import { Sequelize } from "sequelize";
+import { sequelizePool } from "../libs/sequelize";
 
 export interface ProductsModel {
     id: number;
@@ -21,20 +22,14 @@ export interface ProductsModel {
 
 class ProductServices {
     products: ProductsModel[];
-    pool: Pool
     constructor() {
         this.products = []
-        this.pool = postgresPool;
-
-        // Configura un manejador de errores para el pool
-        this.pool.on('error', (error: Error) => console.log(error));
     }
 
 
     async getAllProducts() {
-        const client = await getConnection();
-        const rta = await this.pool.query('SELECT * FROM task');
-        return rta.rows;
+        const res = await sequelizePool.models.Products.findAll();
+        return res;
     }
 
     async addProduct(payload: JerseyModel) {

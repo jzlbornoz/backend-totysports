@@ -2,7 +2,7 @@ import express from "express";
 import { boomHandler, errorHandler, logsErrors } from "./middlewares/error.handler";
 const routerApi = require('./routes');
 const app = express();
-const PORT = process.env.PORT || 3077;
+const PORT = process.env.PORT || 3004;
 
 app.use(express.json());
 
@@ -17,5 +17,5 @@ app.use(boomHandler);
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-    console.log("servidor en el puerto " + PORT);
+    console.log("servidoeer en el puertowwwww " + PORT);
 })
