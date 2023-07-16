@@ -14,7 +14,7 @@ const sequelizePool = new sequelize_1.Sequelize(URI, {
 exports.sequelizePool = sequelizePool;
 (0, models_1.setUpModel)(sequelizePool);
 // Sincronización automática de tablas
-sequelizePool.sync({ force: true })
+sequelizePool.sync()
     .then(() => {
     console.log('Tablas sincronizadas correctamente.');
 })

@@ -1,6 +1,6 @@
-import { JerseyModel } from "../interfaces/Jersey.model";
-import { Optional, Sequelize } from "sequelize";
+import { Sequelize } from "sequelize";
 import { sequelizePool } from "../libs/sequelize";
+import { Product } from "../db/models/product.model";
 
 
 export interface ProductsModel {
@@ -19,6 +19,8 @@ export interface ProductsModel {
     brand: string;
 }
 
+
+
 class ProductServices {
     products: ProductsModel[];
     pool: Sequelize
@@ -33,7 +35,7 @@ class ProductServices {
         return res;
     }
 
-    async addProduct(payload : any) {
+    async addProduct(payload: Partial<Product>) {
         const newProduct = await sequelizePool.models.Product.create(payload);
         return newProduct;
     }

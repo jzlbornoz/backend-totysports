@@ -1,7 +1,4 @@
-import { Optional } from "sequelize";
-import { Product } from "../db/models/product.model";
-
-export interface JerseyModel extends Optional<Product, 'id'> {
+export interface JerseyModel {
   name: string;
   size: string;
   price: number;
