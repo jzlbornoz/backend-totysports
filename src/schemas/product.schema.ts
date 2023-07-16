@@ -4,15 +4,15 @@ import Joi from "joi";
 const id = Joi.string();
 const name = Joi.string().min(3).max(80);
 const price = Joi.number().integer().min(1).max(40000);
-const size = Joi.array().items(Joi.string());
+const size = Joi.string();
 const sale = Joi.number().integer().min(1).max(40000);
 const team = Joi.string().alphanum().min(3).max(20);
-const players = Joi.array().items(Joi.string());
-const season = Joi.array().items(Joi.string()) || Joi.string().alphanum().min(4).max(12);
+const players = Joi.string();
+const season = Joi.string().min(4).max(12);
 const stock = Joi.number().integer().min(1).max(3);
-const technology = Joi.array().items(Joi.string());
+const technology = Joi.string();
 const link = Joi.string().uri();
-const img = Joi.array().items(Joi.string().uri())
+const img = Joi.string().uri()
 const brand = Joi.string().alphanum().min(2).max(20);
 const club = Joi.boolean();
 

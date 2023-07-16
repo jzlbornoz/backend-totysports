@@ -8,9 +8,18 @@ const URI = `postgres://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${
 
 const sequelizePool = new Sequelize(URI, {
     dialect: 'postgres',
-    logging: true
+    logging: true,
 });
 
 setUpModel(sequelizePool);
 
-export {sequelizePool};  
+// Sincronización automática de tablas
+sequelizePool.sync({ force: true })
+  .then(() => {
+    console.log('Tablas sincronizadas correctamente.');
+  })
+  .catch(error => {
+    console.error('Error al sincronizar tablas:', error);
+  });
+
+export { sequelizePool };  

@@ -6,8 +6,8 @@ const routerProducts = require('./products.router');
 function routerApi(app: Express): void {
     const router: Router = express.Router();
     app.use('/api/v1', router);
-   // router.use('/bot', routerBot);
-    router.use('/products',routerProducts)
+    // router.use('/bot', routerBot);
+    router.use('/products', routerProducts)
 }
 
-module.exports = routerApi;
+export { routerApi } 

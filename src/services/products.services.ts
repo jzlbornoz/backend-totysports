@@ -1,8 +1,7 @@
-import { Pool } from "pg";
 import { JerseyModel } from "../interfaces/Jersey.model";
-import { getConnection } from "../libs/postgres";
-import { Sequelize } from "sequelize";
+import { Optional, Sequelize } from "sequelize";
 import { sequelizePool } from "../libs/sequelize";
+
 
 export interface ProductsModel {
     id: number;
@@ -12,7 +11,7 @@ export interface ProductsModel {
     sale: number;
     team: string;
     players?: string[];
-    season: string | string[];
+    season: string;
     stock: number;
     technology: string[];
     link: string;
@@ -22,23 +21,21 @@ export interface ProductsModel {
 
 class ProductServices {
     products: ProductsModel[];
+    pool: Sequelize
     constructor() {
         this.products = []
+        this.pool = sequelizePool
     }
 
 
     async getAllProducts() {
-        const res = await sequelizePool.models.Products.findAll();
+        const res = await sequelizePool.models.Product.findAll();
         return res;
     }
 
-    async addProduct(payload: JerseyModel) {
-        const productToAdd = payload;
-        this.products.push({
-            id: 12,
-            ...payload
-        });
-        return productToAdd;
+    async addProduct(payload : any) {
+        const newProduct = await sequelizePool.models.Product.create(payload);
+        return newProduct;
     }
     async findProduct(payload: string) {
         const productToFind = this.products.find((item) => item.id = parseInt(payload))

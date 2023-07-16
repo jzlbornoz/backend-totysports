@@ -4,20 +4,18 @@ exports.ProductServices = void 0;
 const sequelize_1 = require("../libs/sequelize");
 class ProductServices {
     products;
+    pool;
     constructor() {
         this.products = [];
+        this.pool = sequelize_1.sequelizePool;
     }
     async getAllProducts() {
-        const res = await sequelize_1.sequelizePool.models.Products.findAll();
+        const res = await sequelize_1.sequelizePool.models.Product.findAll();
         return res;
     }
     async addProduct(payload) {
-        const productToAdd = payload;
-        this.products.push({
-            id: 12,
-            ...payload
-        });
-        return productToAdd;
+        const newProduct = await sequelize_1.sequelizePool.models.Product.create(payload);
+        return newProduct;
     }
     async findProduct(payload) {
         const productToFind = this.products.find((item) => item.id = parseInt(payload));

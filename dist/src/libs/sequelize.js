@@ -9,7 +9,15 @@ const PASSWORD = encodeURIComponent(config_1.config.dbPassword);
 const URI = `postgres://${USER}:${PASSWORD}@${config_1.config.dbHost}:${config_1.config.dbPort}/${config_1.config.dbName}`;
 const sequelizePool = new sequelize_1.Sequelize(URI, {
     dialect: 'postgres',
-    logging: true
+    logging: true,
 });
 exports.sequelizePool = sequelizePool;
 (0, models_1.setUpModel)(sequelizePool);
+// Sincronización automática de tablas
+sequelizePool.sync({ force: true })
+    .then(() => {
+    console.log('Tablas sincronizadas correctamente.');
+})
+    .catch(error => {
+    console.error('Error al sincronizar tablas:', error);
+});
