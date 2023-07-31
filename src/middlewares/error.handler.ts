@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { CustomError } from "../interfaces/CustomError";
+import { CustomError } from "../types";
 
 
 type ErrorHandlerMiddleware = (

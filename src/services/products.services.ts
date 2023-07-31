@@ -1,22 +1,11 @@
 import { Sequelize } from "sequelize";
 import { sequelizePool } from "../libs/sequelize";
 import { Product } from "../db/models/product.model";
+import { JerseyModel } from "../types";
 
 
-export interface ProductsModel {
+export interface ProductsModel extends JerseyModel {
     id: number;
-    name: string;
-    size: string[];
-    price: number;
-    sale: number;
-    team: string;
-    players?: string[];
-    season: string;
-    stock: number;
-    technology: string[];
-    link: string;
-    img: string[];
-    brand: string;
 }
 
 

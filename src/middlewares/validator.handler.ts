@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from "express";
-import { CustomError } from "../interfaces/CustomError";
 import { Schema } from "joi";
 import { badRequest } from "@hapi/boom";
 
