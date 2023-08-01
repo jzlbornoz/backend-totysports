@@ -1,8 +1,8 @@
 import { Router, Response, Request, NextFunction, request } from "express";
 import { ProductServices } from "../services/products.services";
-import { JerseyModel } from "../interfaces/Jersey.model";
 import { validatorHandler } from "../middlewares/validator.handler";
 import { createProductSchema, getProductSchema, updateProductSchema } from "../schemas/product.schema";
+import { JerseyModel } from "../types";
 
 const router = Router();
 const services = new ProductServices();

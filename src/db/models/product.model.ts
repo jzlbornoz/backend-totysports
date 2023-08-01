@@ -94,7 +94,7 @@ interface ProductAttributes {
     name: string;
     price: number;
     sale: number;
-    img: string;
+    img: string[];
     team: string;
     size: string;
     players: string | null;
@@ -126,7 +126,7 @@ const productSchema = {
     },
     img: {
         allowNull: false,
-        type: DataTypes.STRING,
+        type: DataTypes.ARRAY(DataTypes.STRING),
     },
     team: {
         allowNull: false,
@@ -167,7 +167,7 @@ class Product extends Model<ProductAttributes> implements ProductAttributes {
     public name!: string;
     public price!: number;
     public sale!: number;
-    public img!: string;
+    public img!: string[];
     public team!: string;
     public size!: string;
     public players!: string | null;

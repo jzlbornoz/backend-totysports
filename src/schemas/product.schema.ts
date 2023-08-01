@@ -12,7 +12,7 @@ const season = Joi.string().min(4).max(12);
 const stock = Joi.number().integer().min(1).max(3);
 const technology = Joi.string();
 const link = Joi.string().uri();
-const img = Joi.string().uri()
+const img = Joi.array().items(Joi.string().uri());
 const brand = Joi.string().alphanum().min(2).max(20);
 const club = Joi.boolean();
 
